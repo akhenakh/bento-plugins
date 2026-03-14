@@ -49,7 +49,7 @@ go build -o bento-plugins main.go
 Run a pipeline utilizing multiple custom plugins:
 
 ```bash
-./custom-bento -c pipeline.yaml
+./bento-plugins -c pipeline.yaml
 ```
 
 **Example Pipeline (`pipeline.yaml`):**
@@ -67,7 +67,6 @@ pipeline:
     # Enrich the payload with H3 cell and Timezone using Geo-Bento
     - mapping: |
         root = this
-        root.h3 = h3(this.lat, this.lng, 12)
         root.tz = tz(this.lat, this.lng)
     
     # Use an LLM to generate a quick summary string of the location
@@ -90,7 +89,7 @@ output:
 CGO_ENABLED=1 go build -tags "x_bento_extra" -ldflags="-s -w" -trimpath .
 ```
 
-Zig CC build
+Zig CC build:
 ```sh
 GOOS=linux GOARCH=amd64  CGO_ENABLED=1 CGO_CFLAGS="-I/usr/include" CC="zig cc -target x86_64-linux-musl" go build -tags "x_bento_extra" -o bento-amd64 --ldflags '-linkmode=external -extldflags=-static'  .
 GOOS=linux GOARCH=riscv64  CGO_ENABLED=1  CC="zig cc -target riscv64-linux-musl" go build -tags "x_bento_extra" -o bento-risc-v --ldflags '-linkmode=external -extldflags=-static' .
