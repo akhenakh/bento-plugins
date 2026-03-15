@@ -6,7 +6,7 @@ require (
 	github.com/akhenakh/bento-aprs v0.0.0-20260313014937-68d78aac3bc4
 	github.com/akhenakh/bento-cbor v0.0.0-20250327224712-7ed617d7da93
 	github.com/akhenakh/bento-llm v0.0.0-20260314165518-2afce656be05
-	github.com/akhenakh/geo-bento v0.0.0-20260314153221-e80ba654d779
+	github.com/akhenakh/geo-bento v0.0.0-20260315164359-b25432469058
 	github.com/warpstreamlabs/bento v1.15.2
 )
 
@@ -70,7 +70,7 @@ require (
 	github.com/PaesslerAG/jsonpath v0.1.1 // indirect
 	github.com/akhenakh/a5-go v0.0.0-20260314141947-776cda89b91c // indirect
 	github.com/akhenakh/coord2country v0.0.0-20260314151757-da75e63be731 // indirect
-	github.com/akhenakh/goh3 v0.0.0-20250327184419-a2525e5c839b // indirect
+	github.com/akhenakh/goh3 v0.0.0-20260315153211-62b05f30d698 // indirect
 	github.com/andybalholm/brotli v1.2.0 // indirect
 	github.com/apache/arrow-go/v18 v18.5.1 // indirect
 	github.com/apache/arrow/go/v15 v15.0.2 // indirect
@@ -304,7 +304,7 @@ require (
 	github.com/nats-io/nkeys v0.4.11 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/nats-io/stan.go v0.10.4 // indirect
-	github.com/ncruces/go-strftime v0.1.9 // indirect
+	github.com/ncruces/go-strftime v1.0.0 // indirect
 	github.com/neo4j/neo4j-go-driver/v5 v5.24.0 // indirect
 	github.com/nsf/jsondiff v0.0.0-20230430225905-43f6cf3098c1 // indirect
 	github.com/nsqio/go-nsq v1.1.0 // indirect
@@ -432,7 +432,7 @@ require (
 	golang.org/x/net v0.51.0 // indirect
 	golang.org/x/oauth2 v0.36.0 // indirect
 	golang.org/x/sync v0.19.0 // indirect
-	golang.org/x/sys v0.41.0 // indirect
+	golang.org/x/sys v0.42.0 // indirect
 	golang.org/x/telemetry v0.0.0-20260209163413-e7419c687ee4 // indirect
 	golang.org/x/term v0.40.0 // indirect
 	golang.org/x/text v0.34.0 // indirect
@@ -461,10 +461,10 @@ require (
 	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20250710124328-f3f2b991d03b // indirect
 	k8s.io/utils v0.0.0-20251002143259-bc988d571ff4 // indirect
-	modernc.org/gc/v3 v3.0.0-20240107210532-573471604cb6 // indirect
-	modernc.org/libc v1.61.13 // indirect
+	modernc.org/gc/v3 v3.1.2 // indirect
+	modernc.org/libc v1.70.0 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
-	modernc.org/memory v1.9.1 // indirect
+	modernc.org/memory v1.11.0 // indirect
 	modernc.org/sqlite v1.29.6 // indirect
 	modernc.org/strutil v1.2.1 // indirect
 	modernc.org/token v1.1.0 // indirect
