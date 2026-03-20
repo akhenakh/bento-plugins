@@ -1,6 +1,6 @@
 # Custom Bento Distribution
 
-This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, binary data processing, and LLM/AI capabilities into a single powerful stream-processing binary...
+This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, binary data processing, LLM/AI capabilities, and IRC chat networking into a single powerful stream-processing binary.
 
 ## Included Plugins
 
@@ -32,6 +32,13 @@ A processor plugin (`llm`) that allows you to query Large Language Models direct
 *   Supports multiple AI providers: `openai`, `anthropic`, `openrouter`, and generic `openai-compat` endpoints (like Ollama, LM Studio).
 *   Supports **Model Context Protocol (MCP)** via `stdio`, `http`, and `sse`, allowing your LLM agent to access external tools and data sources autonomously during the stream processing.
 *   Fully supports Bento's Bloblang interpolation in prompts.
+
+### 1. [Bento-IRC](https://github.com/akhenakh/bento-irc)
+Input and output plugins (`irc`) for robust interaction with IRC networks.
+*   **Input**: Read messages from a specific IRC channel and ingest them into the pipeline as structured JSON.
+*   **Output**: Send messages to IRC channels, supporting dynamic routing per message based on the JSON payload.
+*   **Connection Reuse**: Share a single, thread-safe TCP/TLS connection between the input and output (ideal for building bots).
+*   Fully integrated with Bento's native auto-reconnect and backoff mechanics.
 
 ---
 
@@ -76,7 +83,7 @@ pipeline:
         api_key: "${OPENAI_API_KEY}"
         prompt: "Write a one sentence welcome message for someone located in the timezone ${! json('tz') }."
         
-    #  Convert the final JSON payload to CBOR for efficient storage
+    # Convert the final JSON payload to CBOR for efficient storage
     - cbor:
         operator: from_json
 

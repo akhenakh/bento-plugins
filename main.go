@@ -24,6 +24,9 @@ import (
 	_ "github.com/akhenakh/geo-bento/randpos"
 	_ "github.com/akhenakh/geo-bento/s2"
 	_ "github.com/akhenakh/geo-bento/tz"
+
+	// Import IRC plugin
+	_ "github.com/akhenakh/bento-irc/irc"
 )
 
 func main() {
