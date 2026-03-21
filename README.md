@@ -1,6 +1,6 @@
 # Custom Bento Distribution
 
-This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, marine AIS tracking, binary data processing, LLM/AI capabilities, and IRC chat networking into a single powerful stream-processing binary.
+This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, marine AIS tracking, binary data processing, LLM/AI capabilities, IRC chat networking, and Bluesky social streaming into a single powerful stream-processing binary.
 
 ## Included Plugins
 
@@ -46,6 +46,15 @@ Input and output plugins (`irc`) for robust interaction with IRC networks.
 *   **Output**: Send messages to IRC channels, supporting dynamic routing per message based on the JSON payload.
 *   **Connection Reuse**: Share a single, thread-safe TCP/TLS connection between the input and output (ideal for building bots).
 *   Fully integrated with Bento's native auto-reconnect and backoff mechanics.
+
+### 1. [Bento-Bluesky](https://github.com/akhenakh/bento-bluesky)
+An input plugin (`bluesky_jetstream`) for live-streaming posts and events from the [Bluesky](https://bsky.app) social network via the [Jetstream](https://github.com/bluesky-social/jetstream) WebSocket API.
+*   Streams AT Protocol events (posts, likes, reposts, follows, and more) as structured JSON directly into your pipeline.
+*   Server-side collection filtering by AT Protocol NSID (e.g. `app.bsky.feed.post`, `app.bsky.feed.like`).
+*   Automatic reconnection with configurable backoff and WebSocket keep-alive pings.
+*   Cursor persistence: resume the stream from the last processed event after a restart using a local cursor file.
+*   Metadata extraction on every message: `@bluesky_did`, `@bluesky_kind`, `@bluesky_collection`, `@bluesky_operation`, `@bluesky_time_us`.
+*   Geographic filtering support via free-text/tag matching and the draft ATGeo community lexicons (`community.lexicon.location.geo`, `community.lexicon.location.venue`). Pairs naturally with Geo-Bento processors for coordinate enrichment.
 
 ---
 
