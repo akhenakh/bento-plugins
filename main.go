@@ -30,6 +30,9 @@ import (
 
 	// AIS
 	_ "github.com/akhenakh/bento-aisstream/ais"
+
+	// Bluesky
+	_ "github.com/akhenakh/bento-bluesky/bluesky"
 )
 
 func main() {

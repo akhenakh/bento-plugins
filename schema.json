@@ -2381,6 +2381,30 @@
             }
           }
         },
+        "bluesky_jetstream": {
+          "type": "object",
+          "properties": {
+            "collections": {
+              "type": "array",
+              "description": "AT Protocol collection NSIDs to subscribe to. Leave empty for all events. Default: [app.bsky.feed.post]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "cursor_file": {
+              "type": "string",
+              "description": "Optional path to a file used to persist the last cursor (time_us). When set, the plugin resumes from the last position after a restart. Default: "
+            },
+            "endpoint": {
+              "type": "string",
+              "description": "Jetstream WebSocket endpoint URL. Default: wss://jetstream2.us-east.bsky.network/subscribe"
+            },
+            "max_buffer": {
+              "type": "integer",
+              "description": "Size of the internal event buffer channel. Default: 512"
+            }
+          }
+        },
         "broker": {
           "type": "object",
           "properties": {
@@ -8620,6 +8644,30 @@
               "examples": [
                 "127.0.0.1:11300"
               ]
+            }
+          }
+        },
+        "bluesky_jetstream": {
+          "type": "object",
+          "properties": {
+            "collections": {
+              "type": "array",
+              "description": "AT Protocol collection NSIDs to subscribe to. Leave empty for all events. Default: [app.bsky.feed.post]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "cursor_file": {
+              "type": "string",
+              "description": "Optional path to a file used to persist the last cursor (time_us). When set, the plugin resumes from the last position after a restart. Default: "
+            },
+            "endpoint": {
+              "type": "string",
+              "description": "Jetstream WebSocket endpoint URL. Default: wss://jetstream2.us-east.bsky.network/subscribe"
+            },
+            "max_buffer": {
+              "type": "integer",
+              "description": "Size of the internal event buffer channel. Default: 512"
             }
           }
         },

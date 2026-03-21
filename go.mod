@@ -5,6 +5,7 @@ go 1.26.1
 require (
 	github.com/akhenakh/bento-aisstream v0.0.0-20260321141611-c167e2f80351
 	github.com/akhenakh/bento-aprs v0.0.0-20260313014937-68d78aac3bc4
+	github.com/akhenakh/bento-bluesky v0.0.0-20260321163614-33b246c564ee
 	github.com/akhenakh/bento-cbor v0.0.0-20250327224712-7ed617d7da93
 	github.com/akhenakh/bento-irc v0.0.0-20260320211523-c8d00b38d5ad
 	github.com/akhenakh/bento-llm v0.0.0-20260314165518-2afce656be05
