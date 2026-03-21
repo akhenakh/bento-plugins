@@ -1,6 +1,6 @@
 # Custom Bento Distribution
 
-This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, binary data processing, LLM/AI capabilities, and IRC chat networking into a single powerful stream-processing binary.
+This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, marine AIS tracking, binary data processing, LLM/AI capabilities, and IRC chat networking into a single powerful stream-processing binary.
 
 ## Included Plugins
 
@@ -20,6 +20,13 @@ An input plugin (`aprs_is`) for connecting to APRS-IS servers and streaming pars
 *   Connects globally to relay APRS data (Weather, Telemetry, Position tracking).
 *   Outputs structured JSON messages with automatic metadata extraction (`@aprs_src`, `@aprs_dst`, `@aprs_type`).
 *   Supports server-side APRS-IS filters and automatic reconnections.
+
+### 1. [Bento-AISStream](https://github.com/akhenakh/bento-aisstream)
+An input plugin (`aisstream`) for connecting to the aisstream.io WebSocket API to ingest real-time marine Automatic Identification System (AIS) data.
+*   Streams real-time ship movements and metadata as structured JSON directly into your pipeline.
+*   Supports geographic filtering using configurable bounding boxes.
+*   Filter messages by specific AIS types (e.g., `PositionReport`) or specific Ship MMSI numbers.
+*   Fully integrated with Bento's native auto-reconnect and backoff mechanics for stable streaming.
 
 ### 1. [Bento-CBOR](https://github.com/akhenakh/bento-cbor)
 A processor plugin (`cbor`) for converting between JSON and CBOR (Concise Binary Object Representation) formats.

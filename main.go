@@ -27,6 +27,9 @@ import (
 
 	// Import IRC plugin
 	_ "github.com/akhenakh/bento-irc/irc"
+
+	// AIS
+	_ "github.com/akhenakh/bento-aisstream/ais"
 )
 
 func main() {

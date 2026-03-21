@@ -3,6 +3,7 @@ module github.com/akhenakh/bento-plugins
 go 1.26.1
 
 require (
+	github.com/akhenakh/bento-aisstream v0.0.0-20260321141611-c167e2f80351
 	github.com/akhenakh/bento-aprs v0.0.0-20260313014937-68d78aac3bc4
 	github.com/akhenakh/bento-cbor v0.0.0-20250327224712-7ed617d7da93
 	github.com/akhenakh/bento-irc v0.0.0-20260320211523-c8d00b38d5ad
@@ -69,6 +70,7 @@ require (
 	github.com/OneOfOne/xxhash v1.2.8 // indirect
 	github.com/PaesslerAG/gval v1.2.3 // indirect
 	github.com/PaesslerAG/jsonpath v0.1.1 // indirect
+	github.com/aisstream/ais-message-models/golang/aisStream v0.0.0-20230628154343-8650fc5bf8c3 // indirect
 	github.com/akhenakh/a5-go v0.0.0-20260314141947-776cda89b91c // indirect
 	github.com/akhenakh/coord2country v0.0.0-20260314151757-da75e63be731 // indirect
 	github.com/akhenakh/goh3 v0.0.0-20260315153211-62b05f30d698 // indirect
