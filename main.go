@@ -33,6 +33,9 @@ import (
 
 	// Bluesky
 	_ "github.com/akhenakh/bento-bluesky/bluesky"
+
+	// Import Amazon SES plugin
+	_ "github.com/akhenakh/bento-ses/ses"
 )
 
 func main() {

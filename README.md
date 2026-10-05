@@ -1,6 +1,6 @@
 # Custom Bento Distribution
 
-This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, marine AIS tracking, binary data processing, LLM/AI capabilities, IRC chat networking, and Bluesky social streaming into a single powerful stream-processing binary.
+This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, marine AIS tracking, binary data processing, LLM/AI capabilities, IRC chat networking, Bluesky social streaming, and Amazon SES email delivery into a single powerful stream-processing binary.
 
 ## Included Plugins
 
@@ -55,6 +55,14 @@ An input plugin (`bluesky_jetstream`) for live-streaming posts and events from t
 *   Cursor persistence: resume the stream from the last processed event after a restart using a local cursor file.
 *   Metadata extraction on every message: `@bluesky_did`, `@bluesky_kind`, `@bluesky_collection`, `@bluesky_operation`, `@bluesky_time_us`.
 *   Geographic filtering support via free-text/tag matching and the draft ATGeo community lexicons (`community.lexicon.location.geo`, `community.lexicon.location.venue`). Pairs naturally with Geo-Bento processors for coordinate enrichment.
+
+### 1. [Bento-SES](https://github.com/akhenakh/bento-ses)
+An output plugin (`aws_ses`) for sending emails through [Amazon SES](https://aws.amazon.com/ses/) using the SES v2 `SendEmail` API.
+*   Sends plain text and/or HTML emails, assembled as `multipart/alternative`.
+*   Supports file attachments and inline images referenced from the HTML body via `cid:`.
+*   Sender, recipients, subject, bodies and attachment/image sources are all [Go templates](https://pkg.go.dev/text/template) rendered against the message payload (with helpers such as `base64`, `join`, `default`, `toJson`).
+*   Reuses the same `credentials` configuration block as the built-in Bento AWS components (shared file, static keys, profiles, assumed roles, EC2 role, expiry window).
+*   End-to-end tested against the in-process [kumo](https://github.com/sivchari/kumo) AWS emulator.
 
 ---
 
