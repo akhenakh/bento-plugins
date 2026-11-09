@@ -10,8 +10,9 @@ require (
 	github.com/akhenakh/bento-irc v0.0.0-20260320211523-c8d00b38d5ad
 	github.com/akhenakh/bento-llm v0.0.0-20260314165518-2afce656be05
 	github.com/akhenakh/bento-ses v0.0.0-20261005215913-8770cc68ee17
+	github.com/akhenakh/bento-twilio v0.0.0-20261109195334-3126ba6b0ea4
 	github.com/akhenakh/geo-bento v0.0.0-20260315164359-b25432469058
-	github.com/warpstreamlabs/bento v1.21.2
+	github.com/warpstreamlabs/bento v1.22.0
 )
 
 require (
@@ -39,17 +40,16 @@ require (
 	github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4 // indirect
 	github.com/99designs/keyring v1.2.2 // indirect
 	github.com/AthenZ/athenz v1.12.30 // indirect
-	github.com/Azure/azure-sdk-for-go v68.0.0+incompatible // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.23.1 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.14.0 // indirect
-	github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos v0.3.6 // indirect
+	github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos v1.5.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/data/aztables v1.1.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/internal v1.12.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus v1.10.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v1.8.1 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/storage/azqueue v1.0.0 // indirect
 	github.com/Azure/go-amqp v1.4.0 // indirect
-	github.com/Azure/go-ntlmssp v0.1.0 // indirect
+	github.com/Azure/go-ntlmssp v0.1.1 // indirect
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.8.0 // indirect
 	github.com/BurntSushi/toml v1.6.0 // indirect
 	github.com/ClickHouse/ch-go v0.71.0 // indirect
@@ -177,6 +177,7 @@ require (
 	github.com/dvsekhvalnov/jose2go v1.11.0 // indirect
 	github.com/eapache/go-resiliency v1.7.0 // indirect
 	github.com/eapache/queue v1.1.0 // indirect
+	github.com/eclipse/paho.golang v0.23.0 // indirect
 	github.com/eclipse/paho.mqtt.golang v1.5.1 // indirect
 	github.com/elastic/elastic-transport-go/v8 v8.7.0 // indirect
 	github.com/elastic/go-elasticsearch/v9 v9.0.0 // indirect
@@ -311,7 +312,7 @@ require (
 	github.com/mtibben/percent v0.2.1 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/nats-io/nats.go v1.49.0 // indirect
-	github.com/nats-io/nkeys v0.4.16 // indirect
+	github.com/nats-io/nkeys v0.4.17 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/nats-io/stan.go v0.10.4 // indirect
 	github.com/ncruces/go-strftime v1.0.0 // indirect
@@ -344,7 +345,7 @@ require (
 	github.com/questdb/go-questdb-client/v3 v3.2.0 // indirect
 	github.com/quipo/dependencysolver v0.0.0-20170801134659-2b009cb4ddcc // indirect
 	github.com/r3labs/diff/v3 v3.0.1 // indirect
-	github.com/rabbitmq/amqp091-go v1.9.0 // indirect
+	github.com/rabbitmq/amqp091-go v1.13.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20250401214520-65e299d6c5c9 // indirect
 	github.com/redis/go-redis/v9 v9.18.0 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
@@ -360,7 +361,7 @@ require (
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/sijms/go-ora/v2 v2.8.22 // indirect
 	github.com/sirupsen/logrus v1.9.4 // indirect
-	github.com/slack-go/slack v0.17.3 // indirect
+	github.com/slack-go/slack v0.23.1 // indirect
 	github.com/smira/go-statsd v1.3.4 // indirect
 	github.com/snowflakedb/gosnowflake/v2 v2.2.0 // indirect
 	github.com/snowplow/snowplow-golang-analytics-sdk v0.4.1 // indirect
@@ -381,8 +382,10 @@ require (
 	github.com/tidwall/sjson v1.2.5 // indirect
 	github.com/tilinna/z85 v1.0.0 // indirect
 	github.com/trinodb/trino-go-client v0.313.0 // indirect
-	github.com/twmb/franz-go v1.18.1 // indirect
+	github.com/twilio/twilio-go v1.33.0 // indirect
+	github.com/twmb/franz-go v1.20.7 // indirect
 	github.com/twmb/franz-go/pkg/kmsg v1.12.0 // indirect
+	github.com/twmb/franz-go/pkg/sasl/kerberos v1.1.0 // indirect
 	github.com/twpayne/go-geom v1.6.1 // indirect
 	github.com/twpayne/go-polyline v1.1.1 // indirect
 	github.com/urfave/cli/v2 v2.27.7 // indirect

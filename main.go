@@ -36,6 +36,10 @@ import (
 
 	// Import Amazon SES plugin
 	_ "github.com/akhenakh/bento-ses/ses"
+
+	// Import Twilio plugins
+	_ "github.com/akhenakh/bento-twilio/sms"
+	_ "github.com/akhenakh/bento-twilio/webhook"
 )
 
 func main() {

@@ -1,10 +1,10 @@
 # Custom Bento Distribution
 
-This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, marine AIS tracking, binary data processing, LLM/AI capabilities, IRC chat networking, Bluesky social streaming, and Amazon SES email delivery into a single powerful stream-processing binary.
+This repository provides a unified [Bento](https://warpstreamlabs.github.io/bento/) build containing all custom plugins I'm maintaining. It brings together geographic utilities, amateur radio integrations, marine AIS tracking, binary data processing, LLM/AI capabilities, IRC chat networking, Bluesky social streaming, Amazon SES email delivery, and Twilio SMS/messaging into a single powerful stream-processing binary.
 
 ## Included Plugins
 
-This distribution compiles the following Go modules into Bento:
+This distribution compiles the following Go modules into Bento (built against Bento v1.22.0):
 
 ### 1. [Geo-Bento](https://github.com/akhenakh/geo-bento)
 A suite of mapping processors to transform and enrich geographic coordinates from a stream.
@@ -63,6 +63,14 @@ An output plugin (`aws_ses`) for sending emails through [Amazon SES](https://aws
 *   Sender, recipients, subject, bodies and attachment/image sources are all [Go templates](https://pkg.go.dev/text/template) rendered against the message payload (with helpers such as `base64`, `join`, `default`, `toJson`).
 *   Reuses the same `credentials` configuration block as the built-in Bento AWS components (shared file, static keys, profiles, assumed roles, EC2 role, expiry window).
 *   End-to-end tested against the in-process [kumo](https://github.com/sivchari/kumo) AWS emulator.
+
+### 1. [Bento-Twilio](https://github.com/akhenakh/bento-twilio)
+Output and processor plugins (`twilio_sms`, `twilio_webhook`) for [Twilio](https://www.twilio.com/) messaging.
+*   `twilio_sms` *(Output)*: Sends SMS, MMS (up to ten media URLs) or Content API templates through the Twilio Messages API, optionally via a Messaging Service sender pool.
+*   `twilio_webhook` *(Processor)*: Verifies `X-Twilio-Signature` and turns delivery status callbacks and inbound SMS (`STOP`/`START`/`HELP`) into JSON events for downstream components.
+*   `from`, `to`, `body`, media URLs, callback URLs and template variables are all rendered as Go templates against the message payload.
+*   Credentials (`account_sid`, `auth_token`) come from the config or `TWILIO_ACCOUNT_SID`/`TWILIO_AUTH_TOKEN`.
+*   Supports Twilio regional/edge routing, smart encoding, link shortening and delivery status callbacks.
 
 ---
 
